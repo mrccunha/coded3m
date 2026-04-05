@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- App identity -->
+    <key>CFBundleDisplayName</key>
+    <string>DriveTracker</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+
+    <!-- Location usage -->
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>O DriveTracker precisa de localização contínua para registrar o percurso, velocidade e posição exata da viagem, mesmo com o app em segundo plano e durante o uso do CarPlay.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>O DriveTracker usa sua localização para registrar o percurso e monitorar velocidade em tempo real.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>O DriveTracker precisa de localização em segundo plano para continuar rastreando durante uma viagem com o CarPlay.</string>
+
+    <!-- Background modes -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
+
+    <!-- Photo library -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Usado para adicionar foto do motorista ao cadastro.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Usado para tirar foto do motorista no cadastro.</string>
+
+    <!-- CarPlay -->
+    <key>CPSupportedTemplates</key>
+    <array>
+        <string>CPListTemplate</string>
+        <string>CPInformationTemplate</string>
+        <string>CPAlertTemplate</string>
+    </array>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <true/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>CPTemplateApplicationSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>CarPlay</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).CarPlaySceneDelegate</string>
+                </dict>
+            </array>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+
+    <!-- UI -->
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <false/>
+</dict>
+</plist>
